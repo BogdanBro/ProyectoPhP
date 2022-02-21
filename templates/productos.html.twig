@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title%}SuperPollo - Productos {% endblock %}
+{% block body %}
+
+
+
+
+        
+        <div class="headerphoto"></div>
+  <div id="content-wrap">
+    <div id="content">
+      <div id="sidebar">
+      
+      <div id="accordion">
+
+        <div class="titul">
+          <h3>Categorias</h3>
+          <div class="dentro">
+          <ul class="sidemenu">
+            <li><a href="/productos/alitas/1" class="top">Alitas</a></li>
+            <li><a href="/productos/tiras/2"> Tiras de pollo</a></li>
+            
+          </ul>
+
+        </div>
+</div>
+      </div>
+      </div>
+
+
+
+      <div id="main">
+    <h3>Pagina de productos</h3>
+        <p>Por el momento no disponemos de muchos productos, aunque en el futuro es probable que ampliemos el catalogo incluso hagamos envios!</p>
+        <br>
+        <br>
+        <div class="post"> <a name="TemplateInfo"></a>
+
+      
+       {% if productos %}
+{% for producto in productos %}
+    {{include ("partials/datos_producto.html.twig",{"producto": producto}) }}
+    {% endfor %}
+    {% else %}
+    <p>Contacto no encontrado</p>
+    {% endif %}
+       
+         
+        <br>
+        <br>
+        <br>
+        </div>
+        </div>
+        </div>
+        
+
+
+
+{% endblock %}

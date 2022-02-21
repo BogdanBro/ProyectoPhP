@@ -1,0 +1,69 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<title>{% block title %}{% endblock %}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="{{ asset('css/estilos.css') }}" type="text/css">
+
+<script src="{{ asset('scripts/jquery.js') }}" type="text/javascript"></script>   
+   <script src="{{ asset('scripts/code.js') }}" type="text/javascript"></script>
+   {% block script %}{% endblock %}
+   <link rel="icon" type="image/x-icon" href="{{ asset('img/fav.ico') }}">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>  
+</head>
+<body>
+<div id="wrap">
+  <div id="header">
+    <div  id="header-content">
+    <img class="logo" id="pollo" src="{{ asset('img/pollo.png') }}" width="85px">
+      <h1 class="logo" id="logo">Super<span class="gray">pollo</span></h1>
+      
+      <ul>
+        <li><a href="/" id="current">Home</a></li>
+        <li><a href="/productos">Productos</a></li>
+        <li><a href="#">Lugares</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Ayuda</a></li>
+      </ul>
+    </div>
+  </div>
+
+{% block body %}{% endblock %}
+
+  <div id="footer">
+    <div id="footer-content">
+      <div class="col float-left">
+        <h3>Site Partners</h3>
+        <ul>
+          <li><a href="#"><strong>Dreamhost</strong> - Reliable Webhosting at $7.95/mo</a></li>
+          <li><a href="#"><strong>4templates</strong> - Low Cost Hi-Quality Templates</a></li>
+          <li><a href="#"><strong>TemplateMonster</strong> - Best templates on the net!</a></li>
+          <li><a href="#"><strong>Fotolia</strong> - Free stock images or from $1</a></li>
+          <li><a href="#"><strong>Text Link Ads</strong> - Easiest. Money. Ever.</a></li>
+        </ul>
+      </div>
+      <div class="col float-left">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#"><strong>openwebdesign.org</strong></a></li>
+          <li><a href="#"><strong>OSWD.org</strong></a></li>
+          <li><a href="#"><strong>zeroweb.org</strong></a></li>
+          <li><a href="#"><strong>Alistapart</strong></a></li>
+          <li><a href="#"><strong>CSS Remix</strong></a></li>
+        </ul>
+      </div>
+      <div class="col2 float-right">
+        <p> © copyright 2006 <strong>Your Company Name</strong><br>
+          Design by: <a href="http://www.styleshout.com"><strong>styleshout</strong></a> &nbsp; &nbsp; Valid <a href="http://jigsaw.w3.org/css-validator/check/referer"><strong>CSS</strong></a> | <a href="http://validator.w3.org/check/referer"><strong>XHTML</strong></a> </p>
+        <ul>
+          <li><a href="#"><strong>Home</strong></a></li>
+          <li><a href="#"><strong>Sitemap</strong></a></li>
+          <li><a href="#"><strong>RSS Feed</strong></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body></html>
